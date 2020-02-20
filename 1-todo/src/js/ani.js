@@ -1,6 +1,6 @@
 $(function () {
   anime.timeline({
-      loop: false
+      loop: true
     })
     .add({
       targets: '.ml5 .line',

@@ -32,25 +32,23 @@ $(function () {
         var data = todo1;
         localStorage.clear = data;
         // convert to html
-        $('#data').html(localStorage.clear);
+        $('#data').html(localStorage.mydata.clear);
         // view in console
         console.clear();
-        // sucess 
-        $.jnotify('Delete data in local storage', 500);
         return false;
     });
 
     // call local storage plugin
-    $('#form').sisyphus({
-        customKeyPrefix: 'data_form', //data prefix
-        timeout: 10, // in seconds
-        onSave: function () {
-            $.jnotify('Data form saved to Local Storage', 1000);
-        },
-        onRestore: function () {
-            $.jnotify('Data form restore from Local Storage', 'warning', 1000);
-        }
-    });
+    /*     $('#form').sisyphus({
+            customKeyPrefix: 'data_form', //data prefix
+            timeout: 10, // in seconds
+            onSave: function () {
+                $.jnotify('Data form saved to Local Storage', 1000);
+            },
+            onRestore: function () {
+                $.jnotify('Data form restore from Local Storage', 'warning', 1000);
+            }
+        }); */
 });
 
 /* $(document).ready(function () {
