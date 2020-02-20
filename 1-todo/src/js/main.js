@@ -5,12 +5,6 @@ const init = function () {
 
 init();
 
-/* $(document).ready(function () {
-    $("#todo1").keypress((e) => {
-        console.log(e.target.value);
-    })
-}); */
-
 $(function () {
     loaddata();
 
@@ -21,19 +15,13 @@ $(function () {
     $("#sendAll").click(function () {
         // template data
         var todo1 = $('#todo1').val();
-        /*         var todo1 = $('#todo1').text().split(/\n/);
-                $(el).empty();
-                for (var i = 0; i < todo1.length; i++) {
-                    if (i > 0) $(el).append('<br>');
-                    $(el).append(document.createTextNode(todo1[i]));
-                } */
         var data = todo1;
         localStorage.mydata = data;
         // convert to html
         $('#data').html(localStorage.mydata);
         // view in console
         console.log(localStorage.mydata);
-        // sucess 
+        // success 
         $.jnotify('Save data in local storage', 500);
         return el;
     });
@@ -64,3 +52,38 @@ $(function () {
         }
     });
 });
+
+/* $(document).ready(function () {
+    $("#todo1").keypress((e) => {
+        console.log(e.target.value);
+    })
+}); */
+/* $(document).ready(function () {
+    $("#txt").on("keyup", function (e) {
+        //13  means enter button
+        if (e.keyCode == 13 && $("#txt").val() != "") {
+            var task = $("<div class='task'></div>").text($("#txt").val());
+            var del = $("<i class='fas fa-trash-alt'></i>").click(function () {
+                var p = $(this).parent();
+                p.fadeOut(function () {
+                    p.remove();
+                });
+            });
+
+            var check = $("<i class='fas fa-check'></i>").click(function () {
+                var p = $(this).parent();
+                p.fadeOut(function () {
+                    $("#complete").append(p);
+                    p.fadeIn();
+                });
+                $(this).remove();
+            });
+
+            task.append(del, check);
+            $("#notcomplete").append(task);
+            //to clear the input
+            $("#txt").val("");
+        }
+    })
+});
+ */
