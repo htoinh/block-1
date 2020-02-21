@@ -1,11 +1,103 @@
 <html>
-    <head>
-        <title>todo</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="/modules/jquery/dist/jquery.slim.min.js"></script>
-        <script src="main.js"></script>
-    </head>
-    <body>
-        <input type="text" name="" id="" onkeydown="">
-    </body>
+
+<head>
+    <title>home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ani.js"></script>
+    <script src="js/anime.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2><a href="#">BootCamp</a></h2>
+        <nav>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            <li><a href="#">Contact</a></li>
+        </nav>
+    </header>
+    <section class="banner-area">
+        <div class="banner-img"></div>
+        <h1 class="ml5">
+            <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span class="letters letters-left">Daily Codes</span>
+                <span class="letters ampersand">&amp;</span>
+                <span class="letters letters-right">Daily Exercises</span>
+                <span class="line line2"></span>
+            </span>
+        </h1>
+        <h2>Responsive Design: Flex</h2>
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="banner-btn" target="_blank">Click
+            Me</a>
+    </section>
+
+    <section class="about-area" id="about">
+        <h3 class="section-title">About Me</h3>
+        <ul class="about-content">
+            <li class="about-left"></li>
+            <li class="about-right">
+                <h2>About my Company</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <a href="https://www.ssk.com/" class="about-btn" target="_blank">Read
+                    More</a>
+            </li>
+        </ul>
+    </section>
+    <section class="tasks-area" id="tasks">
+        <h3 class="section-title">Tasks</h3>
+        <ul class="tasks-content">
+            <li>
+                <i class="fa fa-laptop"></i>
+                <h4>Block1: Todo Lists</h4>
+                <p>Todo Lists with jquery</p>
+            </li>
+            <li>
+                <i class="fa fa-laptop"></i>
+                <h4>Block1: Todo Lists, local storage</h4>
+                <p>Todo Lists with jquery</p>
+            </li>
+            <li>
+                <i class="fa fa-laptop"></i>
+                <h4>Block1: Todo Lists</h4>
+                <p>Todo Lists with jquery</p>
+            </li>
+        </ul>
+        <a href="" class="tasks-btn">Read More</a>
+    </section>
+    <section class="contact-area" id="contact">
+        <h3 class="section-title">Contact</h3>
+        <ul class="contact-content">
+            <li>
+                <i class="fa fa-map-marker"></i>
+                <p>20 Mega Road <br>Munich, Germany</p>
+            </li>
+            <li>
+                <i class="fa fa-phone"></i>
+                <p>+49 111 0002 <br>+49 590 2111</p>
+            </li>
+            <li>
+                <i class="fa fa-envelope-o"></i>
+                <p>info@travel.com <br>mail@awesome.com</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>All Right Reserved by Awesome Coder</p>
+    </footer>
+
+</body>
+
 </html>
