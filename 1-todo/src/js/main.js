@@ -5,6 +5,12 @@ const init = function () {
 
 init();
 
+$(document).ready(function () {
+    $("#todo1").keypress((e) => {
+        console.log(e.target.value);
+    })
+});
+
 $(function () {
     loaddata();
 
@@ -23,14 +29,20 @@ $(function () {
         console.log(localStorage.mydata);
         // success 
         $.jnotify('Save data in local storage', 500);
-        return el;
+        return false;
     });
+    /* 
+        $('#sendAll').ready(function () {
+            $('#data').keypress((e) => {
+                console.log(e.localStorage.mydata);
+            })
+        }); */
 
     $("#deleteAll").click(function () {
         // template data
         var todo1 = $('#todo1').val();
         var data = todo1;
-        localStorage.clear = data;
+        localStorage.mydata = data;
         // convert to html
         $('#data').html(localStorage.mydata.clear);
         // view in console
@@ -38,24 +50,22 @@ $(function () {
         return false;
     });
 
+
     // call local storage plugin
-    /*     $('#form').sisyphus({
-            customKeyPrefix: 'data_form', //data prefix
-            timeout: 10, // in seconds
-            onSave: function () {
-                $.jnotify('Data form saved to Local Storage', 1000);
-            },
-            onRestore: function () {
-                $.jnotify('Data form restore from Local Storage', 'warning', 1000);
-            }
-        }); */
+    $('#form').sisyphus({
+        customKeyPrefix: 'data_form', //data prefix
+        timeout: 10, // in seconds
+        onSave: function () {
+            $.jnotify('Data form saved to Local Storage', 1000);
+        },
+        onRestore: function () {
+            $.jnotify('Data form restore from Local Storage', 'warning', 1000);
+        }
+    });
+
 });
 
-/* $(document).ready(function () {
-    $("#todo1").keypress((e) => {
-        console.log(e.target.value);
-    })
-}); */
+
 /* $(document).ready(function () {
     $("#txt").on("keyup", function (e) {
         //13  means enter button
